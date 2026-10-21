@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #FAF8F5;
+    --bg-dark: #0F172A;
+    --red-primary: #B91C1C;
+    --red-dark: #991B1B;
+    --amber-accent: #D97706;
+    --text-light: #1E293B;
+    --text-dark: #F8FAFC;
+  }
+
+  body {
+    font-family: 'Be Vietnam Pro', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF8F5;
+    color: #1E293B;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+  }
+}
+
+.task-card {
+  position: sticky;
+  will-change: transform, opacity;
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1EFEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Print mode optimization */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+}
